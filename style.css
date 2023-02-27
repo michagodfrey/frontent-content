@@ -1,0 +1,153 @@
+* {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: powderblue;
+}
+
+.wrapper {
+  width: 900px;
+  position: relative;
+  border: 1px solid green;
+}
+.wrapper ul {
+  display: inline-flex;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+.wrapper ul li {
+  list-style: none;
+}
+.wrapper ul li input {
+  filter: blur(100px);
+  display: none;
+}
+.wrapper ul li label {
+  background-color: black;
+  color: white;
+  width: 100px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+.wrapper ul li input[id^=tab]:checked + label {
+  display: flex;
+  background-color: pink;
+  color: black;
+}
+.wrapper ul li .tab_content {
+  background: white;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  padding: 25px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  display: none;
+}
+.wrapper ul li input[id^=tab]:checked ~ .tab_content {
+  display: inline-block;
+}
+.wrapper ul li h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+.wrapper ul li p {
+  font-size: 1rem;
+  margin: 0;
+  text-align: justify;
+}
+.wrapper ul input[id=tab1]:checked ~ #image {
+  background-color: red;
+  background-image: url("images/image1.png");
+}
+.wrapper ul input[id=tab2]:checked ~ #image {
+  background-image: url("images/image2.png");
+}
+.wrapper ul input[id=tab3]:checked ~ #image {
+  background-image: url("images/image3.png");
+}
+
+.image {
+  height: 300px;
+  width: 400px;
+  border: 1px solid blue;
+}
+
+.panels {
+  width: 900px;
+  position: relative;
+}
+.panels ul {
+  border: 1px solid red;
+}
+.panels ul li {
+  list-style: none;
+  display: flex;
+}
+.panels ul li .panel-control {
+  display: flex;
+}
+.panels ul li input {
+  display: none;
+}
+.panels ul li label {
+  background-color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.panels ul li input[id^=panel]:checked + label {
+  display: flex;
+  background-color: red;
+  color: white;
+}
+.panels ul li .panel-content {
+  display: flex;
+}
+.panels ul li .panel-text {
+  background-color: aqua;
+  padding: 1.5rem;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+}
+.panels ul li .panel-img {
+  display: none;
+  width: 300px;
+  height: 300px;
+}
+.panels ul li input[id^=panel]:checked ~ .panel-img {
+  display: inline-block;
+}
+.panels ul li h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+.panels ul li p {
+  margin: 0;
+  text-align: justify;
+}
+.panels .image {
+  height: 300px;
+  width: 300%;
+  border: 1px solid red;
+}
+.panels input[id=tab1]:checked ~ .image {
+  background-image: url("images/image1.png");
+}
+.panels input[id=tab2]:checked ~ .image {
+  background-image: url("images/image2.png");
+}
+.panels input[id=tab3]:checked ~ .image {
+  background-image: url("images/image3.png");
+}
