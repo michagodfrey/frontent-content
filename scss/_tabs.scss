@@ -75,30 +75,19 @@ body {
         margin: 0;
         text-align: justify;
       }
-
     }
+  }
 
-    input[id="tab1"]:checked~#image {
-      background-color: red;
-      background-image: url("images/image1.png");
-    }
-
-    input[id="tab2"]:checked~#image {
-      background-image: url("images/image2.png");
-    }
-
-    input[id="tab3"]:checked~#image {
-      background-image: url("images/image3.png");
-    }
+  .image {
+    height: 300px;
+    width: 900px;
+    border: 1px solid blue;
+    background-image: url("images/image1.png");
+    // background-repeat: no-repeat;
+    // background-size: cover;
   }
 }
 
-.image {
-  height: 300px;
-  width: 400px;
-  border: 1px solid blue;
-  // background-image: url("images/image1.png");
-}
 
 .panels {
   width: 900px;
@@ -121,8 +110,8 @@ body {
 
       label {
         background-color: white;
-        // width: 100px;
-        // height: 100px;
+        width: 100px;
+        height: 100px;
         font-size: 1.5rem;
         cursor: pointer;
       }
@@ -136,29 +125,23 @@ body {
       }
 
       .panel-content {
-        display: flex;
+        display: none;
       }
 
       .panel-text {
         background-color: aqua;
-        // position: absolute;
-        // left: 50;
-        // top: 0;
+        position: absolute;
+        left: 50;
+        top: 0;
+        bottom: 0;
         padding: 1.5rem;
         box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.30);
         display: flex;
       }
 
-      .panel-img {
-        display: none;
-        width: 300px;
-        height: 300px;
-
-      }
-
       input[id^="panel"] {
-        &:checked~.panel-img {
-          display: inline-block;
+        &:checked~.panel-content {
+          display: block;
         }
       }
 
@@ -172,27 +155,46 @@ body {
         text-align: justify;
       }
     }
-
   }
+}
 
-  .image {
-    height: 300px;
-    width: 300%;
-    border: 1px solid red;
-    // background-image: url("images/image1.png");
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 
+  .radio-with-card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    input {
+      &:checked~.card {
+        opacity: 1;
+      }
+    }
+
+    label {
+      margin-right: 10px;
+    }
+
+    .card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 5px;
+      background: red;
+      opacity: .5;
+
+      .card-title {
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      .card-body {
+        font-size: 16px;
+      }
+    }
   }
-
-  input[id="tab1"]:checked~.image {
-    background-image: url("images/image1.png");
-  }
-
-  input[id="tab2"]:checked~.image {
-    background-image: url("images/image2.png");
-  }
-
-  input[id="tab3"]:checked~.image {
-    background-image: url("images/image3.png");
-  }
-
 }

@@ -4,6 +4,25 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
+    <script defer>
+      function toggleTabImg(n) {
+        const tabImg = document.getElementById("image");
+
+        switch (n) {
+          case 1:
+            tabImg.style.backgroundImage = "url('images/image1.png')";
+            break;
+          case 2:
+            tabImg.style.backgroundImage = "url('images/image2.png')";
+            break;
+          case 3:
+            tabImg.style.backgroundImage = "url('images/image3.png')";
+            break;
+          default:
+            tabImg.style.backgroundImage = "url('images/image1.png')";
+        }
+      }
+    </script>
     <title>Tabs Component</title>
   </head>
   <body>
@@ -11,12 +30,7 @@
       <ul>
         <li>
           <input type="radio" id="tab1" name="tab" checked />
-          <label for="tab1">Tab 1</label>
-          <input type="radio" id="tab2" name="tab" />
-          <label for="tab2">Tab 2</label>
-          <input type="radio" id="tab3" name="tab" />
-          <label for="tab3">Tab 3</label>
-          
+          <label for="tab1" onclick="toggleTabImg(1)">Tab 1</label>
           <div class="tab_content">
             <h2>Tab 1</h2>
             <p>
@@ -26,10 +40,10 @@
               Lorem ipsum dolor sit amet consectetur
             </p>
           </div>
-          <div id="image" class="image"></div>
         </li>
         <li>
-          
+          <input type="radio" id="tab2" name="tab" />
+          <label for="tab2" onclick="toggleTabImg(2)">Tab 2</label>
           <div class="tab_content">
             <h2>Tab 2</h2>
             <p>
@@ -40,11 +54,10 @@
               consectetur Lorem ipsum dolor sit amet consectetur
             </p>
           </div>
-          <div id="image" class="image"></div>
         </li>
         <li>
-          
-
+          <input type="radio" id="tab3" name="tab" />
+          <label for="tab3" onclick="toggleTabImg(3)">Tab 3</label>
           <div class="tab_content">
             <h2>Tab 3</h2>
             <p>
@@ -53,9 +66,9 @@
               suscipit modi dignissimos.
             </p>
           </div>
-          <div id="image" class="image"></div>
         </li>
       </ul>
+      <div id="image" class="image"></div>
     </div>
 
     <div style="height: 300px"></div>
@@ -72,15 +85,17 @@
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
                   impedit illum quaerat ab. Corporis recusandae totam laborum
-                  suscipit modi dignissimos.
+                  suscipit modi dignissimos. Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit. Dicta impedit illum quaerat ab.
+                  Corporis recusandae totam laborum suscipit modi dignissimos.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+                  impedit illum quaerat ab. Corporis recusandae totam laborum
+                  suscipit modi dignissimos. Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit. Dicta impedit illum quaerat ab.
+                  Corporis recusandae totam laborum suscipit modi dignissimos.
                 </p>
               </div>
             </div>
-            <img
-              class="panel-img"
-              src="images/image1.png"
-              alt="placeholder image"
-            />
           </div>
         </li>
         <li>
@@ -97,11 +112,6 @@
                 </p>
               </div>
             </div>
-            <img
-              class="panel-img"
-              src="images/image2.png"
-              alt="placeholder image"
-            />
           </div>
         </li>
         <li>
@@ -116,17 +126,52 @@
                   impedit illum quaerat ab. Corporis recusandae totam laborum
                   suscipit modi dignissimos.
                 </p>
+                div
               </div>
             </div>
-            <img
-              class="panel-img"
-              src="images/image3.png"
-              alt="placeholder image"
-            />
           </div>
+        
         </li>
       </ul>
-      <div id="image" class="image"></div>
     </div>
+
+    <div style="height: 300px"></div>
+
+    <div class="radio-group">
+  <div class="radio-with-card">
+    <label>Option 1</label>
+    <input type="radio" name="radio-group" value="option1" checked>
+    <div class="card" id="option1-card">
+      <div class="card-title">Option 1</div>
+      <div class="card-body">
+        <p>This is the card for option 1.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="radio-with-card">
+    <label>Option 2</label>
+    <input type="radio" name="radio-group" value="option2">
+    <div class="card" id="option2-card">
+      <div class="card-title">Option 2</div>
+      <div class="card-body">
+        <p>This is the card for option 2.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="radio-with-card">
+    <label>Option 3</label>
+    <input type="radio" name="radio-group" value="option3">
+    <div class="card" id="option3-card">
+      <div class="card-title">Option 3</div>
+      <div class="card-body">
+        <p>This is the card for option 3.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
   </body>
 </html>

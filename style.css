@@ -68,21 +68,11 @@ body {
   margin: 0;
   text-align: justify;
 }
-.wrapper ul input[id=tab1]:checked ~ #image {
-  background-color: red;
-  background-image: url("images/image1.png");
-}
-.wrapper ul input[id=tab2]:checked ~ #image {
-  background-image: url("images/image2.png");
-}
-.wrapper ul input[id=tab3]:checked ~ #image {
-  background-image: url("images/image3.png");
-}
-
-.image {
+.wrapper .image {
   height: 300px;
-  width: 400px;
+  width: 900px;
   border: 1px solid blue;
+  background-image: url("images/image1.png");
 }
 
 .panels {
@@ -104,6 +94,8 @@ body {
 }
 .panels ul li label {
   background-color: white;
+  width: 100px;
+  height: 100px;
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -113,21 +105,20 @@ body {
   color: white;
 }
 .panels ul li .panel-content {
-  display: flex;
+  display: none;
 }
 .panels ul li .panel-text {
   background-color: aqua;
+  position: absolute;
+  left: 50;
+  top: 0;
+  bottom: 0;
   padding: 1.5rem;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
   display: flex;
 }
-.panels ul li .panel-img {
-  display: none;
-  width: 300px;
-  height: 300px;
-}
-.panels ul li input[id^=panel]:checked ~ .panel-img {
-  display: inline-block;
+.panels ul li input[id^=panel]:checked ~ .panel-content {
+  display: block;
 }
 .panels ul li h2 {
   margin: 0;
@@ -137,17 +128,36 @@ body {
   margin: 0;
   text-align: justify;
 }
-.panels .image {
-  height: 300px;
-  width: 300%;
-  border: 1px solid red;
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
-.panels input[id=tab1]:checked ~ .image {
-  background-image: url("images/image1.png");
+.radio-group .radio-with-card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
 }
-.panels input[id=tab2]:checked ~ .image {
-  background-image: url("images/image2.png");
+.radio-group .radio-with-card input:checked ~ .card {
+  opacity: 1;
 }
-.panels input[id=tab3]:checked ~ .image {
-  background-image: url("images/image3.png");
+.radio-group .radio-with-card label {
+  margin-right: 10px;
+}
+.radio-group .radio-with-card .card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  background: red;
+  opacity: 0.5;
+}
+.radio-group .radio-with-card .card .card-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.radio-group .radio-with-card .card .card-body {
+  font-size: 16px;
 }
