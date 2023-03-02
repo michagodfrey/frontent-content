@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer>
+      function togglePanelImg(n) {
+        const panelImg = document.getElementById("img-portrait");
+
+        switch (n) {
+          case 1:
+            panelImg.style.backgroundImage = "url('images/image1.png')";
+            break;
+          case 2:
+            panelImg.style.backgroundImage = "url('images/image2.png')";
+            break;
+          case 3:
+            panelImg.style.backgroundImage = "url('images/image3.png')";
+            break;
+          default:
+            panelImg.style.backgroundImage = "url('images/imgae1.png')";
+        }
+      }
+    </script>
+    <title>Vertical Tabs Component</title>
+  </head>
+  <body>
+
+    <div class="panels">
+      <ul>
+        <li>
+          <div class="panel-control">
+            <input type="radio" id="panel1" name="panel" checked />
+            <label for="panel1" onclick="togglePanelImg(1)">Panel 1</label>
+            <div class="panel-content">
+              <div class="panel-text">
+                <h2>Panel 1</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+                  impedit illum quaerat ab. Corporis recusandae totam laborum
+                  suscipit modi dignissimos. Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit. Dicta impedit illum quaerat ab.
+                  Corporis recusandae totam laborum suscipit modi dignissimos.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+                  impedit illum quaerat ab. Corporis recusandae totam laborum
+                  suscipit modi dignissimos. Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit. Dicta impedit illum quaerat ab.
+                  Corporis recusandae totam laborum suscipit modi dignissimos.
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="panel-control">
+            <input type="radio" id="panel2" name="panel" />
+            <label for="panel2" onclick="togglePanelImg(2)">Panel 2</label>
+            <div class="panel-content">
+              <div class="panel-text">
+                <h2>Panel 2</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+                  impedit illum quaerat ab. Corporis recusandae totam laborum
+                  suscipit modi dignissimos.
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="panel-control">
+            <input type="radio" id="panel3" name="panel" />
+            <label for="panel3" onclick="togglePanelImg(3)">Panel 3</label>
+            <div class="panel-content">
+              <div class="panel-text">
+                <h2>Panel 3</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+                  impedit illum quaerat ab. Corporis recusandae totam laborum
+                  suscipit modi dignissimos.
+                </p>
+                div
+              </div>
+            </div>
+          </div>
+
+        </li>
+      </ul>
+      <div id="img-portrait" class="image-portrait"></div>
+
+    </div>
+
+  </body>
+</html>

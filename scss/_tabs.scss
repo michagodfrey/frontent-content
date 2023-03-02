@@ -56,6 +56,7 @@ body {
         top: 50px;
         padding: 25px;
         box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.30);
+        height: 80px;
         display: none;
       }
 
@@ -82,119 +83,7 @@ body {
     height: 300px;
     width: 900px;
     border: 1px solid blue;
-    background-image: url("images/image1.png");
-    // background-repeat: no-repeat;
-    // background-size: cover;
-  }
-}
-
-
-.panels {
-  width: 900px;
-  position: relative;
-
-  ul {
-    border: 1px solid red;
-
-    li {
-      list-style: none;
-      display: flex;
-
-      .panel-control {
-        display: flex;
-      }
-
-      input {
-        display: none;
-      }
-
-      label {
-        background-color: white;
-        width: 100px;
-        height: 100px;
-        font-size: 1.5rem;
-        cursor: pointer;
-      }
-
-      input[id^="panel"] {
-        &:checked+label {
-          display: flex;
-          background-color: red;
-          color: white;
-        }
-      }
-
-      .panel-content {
-        display: none;
-      }
-
-      .panel-text {
-        background-color: aqua;
-        position: absolute;
-        left: 50;
-        top: 0;
-        bottom: 0;
-        padding: 1.5rem;
-        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.30);
-        display: flex;
-      }
-
-      input[id^="panel"] {
-        &:checked~.panel-content {
-          display: block;
-        }
-      }
-
-      h2 {
-        margin: 0;
-        font-size: 2rem;
-      }
-
-      p {
-        margin: 0;
-        text-align: justify;
-      }
-    }
-  }
-}
-
-.radio-group {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  .radio-with-card {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-
-    input {
-      &:checked~.card {
-        opacity: 1;
-      }
-    }
-
-    label {
-      margin-right: 10px;
-    }
-
-    .card {
-      border: 1px solid #ccc;
-      padding: 10px;
-      margin: 10px;
-      border-radius: 5px;
-      background: red;
-      opacity: .5;
-
-      .card-title {
-        font-weight: bold;
-        font-size: 18px;
-        margin-bottom: 10px;
-      }
-
-      .card-body {
-        font-size: 16px;
-      }
-    }
+    background-image: url("images/landscape-1.png");
+    background-size: cover;
   }
 }

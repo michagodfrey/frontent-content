@@ -5,27 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
     <script defer>
+
       function toggleTabImg(n) {
-        const tabImg = document.getElementById("image");
+        const tabImg = document.getElementById("img-landscape");
 
         switch (n) {
           case 1:
-            tabImg.style.backgroundImage = "url('images/image1.png')";
+            tabImg.style.backgroundImage = "url('images/landscape-1.png')";
             break;
           case 2:
-            tabImg.style.backgroundImage = "url('images/image2.png')";
+            tabImg.style.backgroundImage = "url('images/landscape-2.png')";
             break;
           case 3:
-            tabImg.style.backgroundImage = "url('images/image3.png')";
+            tabImg.style.backgroundImage = "url('images/landscape-3.png')";
             break;
           default:
-            tabImg.style.backgroundImage = "url('images/image1.png')";
+            tabImg.style.backgroundImage = "url('images/landscape-1.png')";
         }
       }
+
     </script>
     <title>Tabs Component</title>
   </head>
   <body>
+
     <div class="wrapper">
       <ul>
         <li>
@@ -68,110 +71,8 @@
           </div>
         </li>
       </ul>
-      <div id="image" class="image"></div>
+      <div id="img-landscape" class="image"></div>
     </div>
-
-    <div style="height: 300px"></div>
-
-    <div class="panels">
-      <ul>
-        <li>
-          <div class="panel-control">
-            <input type="radio" id="panel1" name="panel" checked />
-            <label for="panel1">Panel 1</label>
-            <div class="panel-content">
-              <div class="panel-text">
-                <h2>Panel 1</h2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-                  impedit illum quaerat ab. Corporis recusandae totam laborum
-                  suscipit modi dignissimos. Lorem ipsum dolor sit amet
-                  consectetur adipisicing elit. Dicta impedit illum quaerat ab.
-                  Corporis recusandae totam laborum suscipit modi dignissimos.
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-                  impedit illum quaerat ab. Corporis recusandae totam laborum
-                  suscipit modi dignissimos. Lorem ipsum dolor sit amet
-                  consectetur adipisicing elit. Dicta impedit illum quaerat ab.
-                  Corporis recusandae totam laborum suscipit modi dignissimos.
-                </p>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="panel-control">
-            <input type="radio" id="panel2" name="panel" />
-            <label for="panel2">Panel 2</label>
-            <div class="panel-content">
-              <div class="panel-text">
-                <h2>Panel 2</h2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-                  impedit illum quaerat ab. Corporis recusandae totam laborum
-                  suscipit modi dignissimos.
-                </p>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="panel-control">
-            <input type="radio" id="panel3" name="panel" />
-            <label for="panel3">Panel 3</label>
-            <div class="panel-content">
-              <div class="panel-text">
-                <h2>Panel 3</h2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-                  impedit illum quaerat ab. Corporis recusandae totam laborum
-                  suscipit modi dignissimos.
-                </p>
-                div
-              </div>
-            </div>
-          </div>
-        
-        </li>
-      </ul>
-    </div>
-
-    <div style="height: 300px"></div>
-
-    <div class="radio-group">
-  <div class="radio-with-card">
-    <label>Option 1</label>
-    <input type="radio" name="radio-group" value="option1" checked>
-    <div class="card" id="option1-card">
-      <div class="card-title">Option 1</div>
-      <div class="card-body">
-        <p>This is the card for option 1.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="radio-with-card">
-    <label>Option 2</label>
-    <input type="radio" name="radio-group" value="option2">
-    <div class="card" id="option2-card">
-      <div class="card-title">Option 2</div>
-      <div class="card-body">
-        <p>This is the card for option 2.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="radio-with-card">
-    <label>Option 3</label>
-    <input type="radio" name="radio-group" value="option3">
-    <div class="card" id="option3-card">
-      <div class="card-title">Option 3</div>
-      <div class="card-body">
-        <p>This is the card for option 3.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
 
   </body>
 </html>
