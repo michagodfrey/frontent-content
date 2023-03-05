@@ -1,69 +1,81 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
     <script defer>
-      // function toggleTabImg(n) {
-      //   const tabImg = document.getElementById("img-landscape");
-      //
-      //   switch (n) {
-      //     case 1:
-      //       tabImg.style.backgroundImage = "url('images/landscape-1.png')";
-      //       break;
-      //     case 2:
-      //       tabImg.style.backgroundImage = "url('images/landscape-2.png')";
-      //       break;
-      //     case 3:
-      //       tabImg.style.backgroundImage = "url('images/landscape-3.png')";
-      //       break;
-      //     default:
-      //       tabImg.style.backgroundImage = "url('images/landscape-1.png')";
-      //   }
-      // }
+      function toggleImage(n) {
+        const image = document.getElementById("image");
 
+        switch (n) {
+          case 1:
+              image.style.backgroundImage = "url('images/mobile-phone-smartphone-svgrepo-com.svg')";
+              image.classList.add("slide-in-top");
+              setTimeout(() => {
+                image.classList.remove("slide-in-top")
+              }, 500)
+              break;
+          case 2:
+              image.style.backgroundImage = "url('images/mobile-phone-svgrepo-com.svg')";
+              image.classList.add("slide-in-top");
+              setTimeout(() => {
+                image.classList.remove("slide-in-top")
+              }, 500)
+              break;
+          case 3:
+              image.style.backgroundImage = "url('images/smartphone-mobile-phone-svgrepo-com.svg')";
+              image.classList.add("slide-in-top");
+              setTimeout(() => {
+                image.classList.remove("slide-in-top")
+              }, 500)
+              break;
+          default:
+              image.style.backgroundImage = "url('images/smartphone-mobile-phone-svgrepo-com.svg')";
+        }
+      }
     </script>
     <title>Radio Buttons Component</title>
-
   </head>
   <body>
     <div class="wrapper-radio">
       <div class="radio-group">
-        <div class="radio-with-card">
-          <label>Option 1</label>
-          <input type="radio" name="radio-group" value="option1" checked>
+        <div class="radio-with-card"> 
+          <input type="radio" id="radio1" name="radio-group" onclick="toggleImage(1)" checked />
+          <label for="radio1" onclick="toggleImage(1)"></label>
           <div class="card" id="option1-card">
             <div class="card-title">Option 1</div>
-            <div class="card-body">
-              <p>This is the card for option 1.</p>
+            <div id="card1" class="card-body">
+              <p>Next level tbh everyday carry, blog copper mug forage kitsch roof party pickled hammock kale chips tofu. Etsy shoreditch 8-bit</p>
             </div>
           </div>
         </div>
 
         <div class="radio-with-card">
-          <label>Option 2</label>
-          <input type="radio" name="radio-group" value="option2">
+          <input type="radio" id="radio2" name="radio-group" onclick="toggleImage(2)"/>
+          <label for="radio2" onclick="toggleImage(2)"></label>
           <div class="card" id="option2-card">
             <div class="card-title">Option 2</div>
             <div class="card-body">
-              <p>This is the card for option 2.</p>
+              <p>Forage kale tofu carry, hammock copper shoreditch 8-bit tbh kitsch party pickled roof chips Etsy next level blog.</p>
             </div>
           </div>
         </div>
 
         <div class="radio-with-card">
-          <label>Option 3</label>
-          <input type="radio" name="radio-group" value="option3">
+          <input type="radio" id="radio3" name="radio-group" onclick="toggleImage(3)" />
+          <label for="radio3" onclick="toggleImage(3)"></label>
           <div class="card" id="option3-card">
             <div class="card-title">Option 3</div>
             <div class="card-body">
-              <p>This is the card for option 3.</p>
+              <p>Roof party tofu shoreditch pickled hammock 8-bit copper mug kale chips forage kitsch blog Etsy next level tbh everyday carry.</p>
             </div>
           </div>
         </div>
       </div>
-      <div id="img-radio" class="img-radio"></div>
+      <div class="image-container">
+        <div id="image" class="image"></div>
+      </div>
     </div>
   </body>
 </html>

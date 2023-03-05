@@ -1,3 +1,42 @@
 * {
     font-size: 16px;
+    box-sizing: border-box
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin screenSml {
+    @media (min-width: 640px) {
+        @content;
+    }
+}
+
+@mixin screenMd {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin screenLg {
+    @media (min-width: 1024px) {
+        @content;
+    }
+}
+
+// index.html page links
+.link-list {
+    display: flex;
+    flex-direction: column;
 }

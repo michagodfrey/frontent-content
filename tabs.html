@@ -7,20 +7,35 @@
     <script defer>
 
       function toggleTabImg(n) {
-        const tabImg = document.getElementById("img-landscape");
+        const tabImg = document.getElementById("img-mobile");
 
         switch (n) {
           case 1:
-            tabImg.style.backgroundImage = "url('images/landscape-1.png')";
+            tabImg.style.backgroundImage = "url('images/mobile-phone-smartphone-svgrepo-com.svg')";
+            tabImg.classList.add("bounce-in-fwd");
+            setTimeout(() => {
+                tabImg.classList.remove("bounce-in-fwd")
+              }, 1000)
+              break;
             break;
           case 2:
-            tabImg.style.backgroundImage = "url('images/landscape-2.png')";
+            tabImg.style.backgroundImage = "url('images/mobile-phone-svgrepo-com.svg')";
+            tabImg.classList.add("bounce-in-fwd");
+            setTimeout(() => {
+                tabImg.classList.remove("bounce-in-fwd")
+              }, 1000)
+              break;
             break;
           case 3:
-            tabImg.style.backgroundImage = "url('images/landscape-3.png')";
+            tabImg.style.backgroundImage = "url('images/smartphone-mobile-phone-svgrepo-com.svg')";
+            tabImg.classList.add("bounce-in-fwd");
+            setTimeout(() => {
+                tabImg.classList.remove("bounce-in-fwd")
+              }, 1000)
+              break;
             break;
           default:
-            tabImg.style.backgroundImage = "url('images/landscape-1.png')";
+            tabImg.style.backgroundImage = "url('images/smartphone-mobile-phone-svgrepo-com.svg')";
         }
       }
 
@@ -33,45 +48,38 @@
       <ul>
         <li>
           <input type="radio" id="tab1" name="tab" checked />
-          <label for="tab1" onclick="toggleTabImg(1)">Tab 1</label>
+          <label for="tab1" onclick="toggleTabImg(1)">1</label>
           <div class="tab_content">
-            <h2>Tab 1</h2>
+            <h2>Option 1</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-              impedit illum quaerat ab. Corporis recusandae totam laborum
-              suscipit modi dignissimos.Lorem ipsum dolor sit amet consectetur
-              Lorem ipsum dolor sit amet consectetur
+              Next level tbh everyday carry, blog copper mug forage kitsch roof party pickled hammock kale chips tofu. Etsy shoreditch 8-bit
             </p>
           </div>
         </li>
         <li>
           <input type="radio" id="tab2" name="tab" />
-          <label for="tab2" onclick="toggleTabImg(2)">Tab 2</label>
+          <label for="tab2" onclick="toggleTabImg(2)">2</label>
           <div class="tab_content">
-            <h2>Tab 2</h2>
+            <h2>Option 2</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-              impedit illum quaerat ab. Corporis recusandae totam laborum
-              suscipit modi dignissimos.Lorem ipsum dolor sit amet consectetur
-              Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet
-              consectetur Lorem ipsum dolor sit amet consectetur
+              Forage kale tofu carry, hammock copper shoreditch 8-bit tbh kitsch party pickled roof chips Etsy next level blog.
             </p>
           </div>
         </li>
         <li>
           <input type="radio" id="tab3" name="tab" />
-          <label for="tab3" onclick="toggleTabImg(3)">Tab 3</label>
+          <label for="tab3" onclick="toggleTabImg(3)">3</label>
           <div class="tab_content">
-            <h2>Tab 3</h2>
+            <h2>Option 3</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-              impedit illum quaerat ab. Corporis recusandae totam laborum
-              suscipit modi dignissimos.
+              Roof party tofu shoreditch pickled hammock 8-bit copper mug kale chips forage kitsch blog Etsy next level tbh everyday carry.
             </p>
           </div>
         </li>
       </ul>
-      <div id="img-landscape" class="image"></div>
+      <div class="image-container">
+        <div id="img-mobile" class="image"></div>
+      </div>
     </div>
 
   </body>
