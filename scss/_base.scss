@@ -15,9 +15,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: #F5F5DC;
 }
 
-@mixin screenSml {
+@mixin screenSm {
     @media (min-width: 640px) {
         @content;
     }
@@ -39,4 +40,9 @@ body {
 .link-list {
     display: flex;
     flex-direction: column;
+}
+
+.spacer {
+    width: 100%;
+    height: 250px;
 }
